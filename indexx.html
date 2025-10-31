@@ -1,0 +1,36 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Stick Runner</title>
+  <link rel="stylesheet" href="stylee.css" />
+</head>
+<body>
+  <div class="page-center">
+    <div class="game-container">
+      <h1>Stick Runner</h1>
+      <div class="controls">
+        Mode:
+        <select id="mode">
+          <option value="easy">Easy</option>
+          <option value="medium" selected>Medium</option>
+          <option value="hard">Hard</option>
+        </select>
+        <button id="startBtn">Start</button>
+        <button id="restartBtn">Restart</button>
+      </div>
+
+      <canvas id="gameCanvas" width="900" height="300" tabindex="0"></canvas>
+
+      <div id="hud" class="hud">
+        <div>Score: <span id="score">0</span></div>
+        <div>High Score: <span id="highscore">0</span></div>
+        <div class="help">Controls: Press <strong>Space</strong> to jump. Click / Tap canvas to jump.</div>
+      </div>
+    </div>
+  </div>
+
+  <script src="scriptt.js"></script>
+</body>
+</html>
