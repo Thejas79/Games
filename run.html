@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>Stick Runner</title>
+    <link rel="stylesheet" href="run.css" />
+  </head>
+  <body>
+    <div id="hud">
+      <div id="score">Score: 0</div>
+      <div id="timer">Time: 00:00</div>
+    </div>
+
+    <canvas id="gameCanvas"></canvas>
+
+    <div id="overlay" class="hidden">
+      <div id="overlayCard">
+        <h1 id="overlayTitle">Game Over</h1>
+        <p id="overlayText">Score: 0</p>
+        <button id="restartBtn">Restart</button>
+      </div>
+    </div>
+
+    <script src="run.js"></script>
+  </body>
+</html>
