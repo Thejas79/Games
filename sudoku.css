@@ -1,0 +1,109 @@
+:root {
+  --bg1: #141e30;
+  --bg2: #243b55;
+  --card: #0f1720aa;
+  --accent: #00c3ff;
+  --accent-2: #0099cc;
+  --text: #ffffff;
+}
+html,
+body {
+  height: 100%;
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+  background: linear-gradient(120deg, var(--bg1), var(--bg2));
+  color: var(--text);
+}
+header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 18px 24px;
+}
+header h1 {
+  margin: 0;
+}
+.controls {
+  display: flex;
+  gap: 8px;
+  align-items: center;
+}
+.controls button,
+.controls select {
+  padding: 8px 10px;
+  border-radius: 6px;
+  border: none;
+  background: var(--accent);
+  color: #fff;
+  cursor: pointer;
+}
+.controls button:hover {
+  background: var(--accent-2);
+}
+#gameArea {
+  display: flex;
+  gap: 24px;
+  align-items: flex-start;
+  padding: 24px;
+  flex-direction: column;
+  align-items: center;
+}
+#board {
+  display: grid;
+  grid-template-columns: repeat(9, 44px);
+  grid-template-rows: repeat(9, 44px);
+  gap: 2px;
+  background: transparent;
+}
+.cell {
+  width: 44px;
+  height: 44px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 18px;
+  background: rgba(255, 255, 255, 0.03);
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+.cell input {
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  border: none;
+  background: transparent;
+  color: var(--text);
+  font-size: 18px;
+  outline: none;
+}
+.cell.given {
+  font-weight: 700;
+  color: #e6f7ff;
+}
+.cell:nth-child(3n) {
+  border-right: 3px solid rgba(255, 255, 255, 0.06);
+}
+/* add thicker borders for 3x3 boxes */
+#board .border-right {
+  border-right: 3px solid rgba(255, 255, 255, 0.16);
+}
+#board .border-bottom {
+  border-bottom: 3px solid rgba(255, 255, 255, 0.16);
+}
+#status {
+  margin-top: 12px;
+}
+button.secondary {
+  background: transparent;
+  border: 1px solid rgba(255, 255, 255, 0.12);
+}
+@media (max-width: 520px) {
+  #board {
+    grid-template-columns: repeat(9, 36px);
+    grid-template-rows: repeat(9, 36px);
+  }
+  .cell {
+    width: 36px;
+    height: 36px;
+  }
+}
